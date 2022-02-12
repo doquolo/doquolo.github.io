@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAqcHrAJSs1gD69/oAtMDWAPDh7gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiERERERABAAIVVVVVECIgIhVVVVUQJSACFVVVVRAjICIVVVVVECUgAhVVFVUQIyAiFVExVRAlIAIVEzMVECMkIhUTExUQJSQCFVFRVRAjJCIVVVVVECUkAhVVVVUQIiQiERERERAEAAAAAAAAAAQAAAAAAAAAAAD//wAAABsAAIARAAAAEQAAgBEAAAARAACAEQAAABEAAIAQAAAAEAAAgBAAAAAQAACAEAAAABsAAP/7AAD//wAA" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>NoteMaster</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <section class="section" id="form">
+        <form name="thisform" onsubmit="validatenote();return false">
+            <label for="task" class="label">Input Task</label></div>
+            <div class="field has-addons">
+                <div class="control">
+                    <input type="text" placeholder="Notes here!" class="input" id="input">
+                </div>
+                <div class="control">
+                    <input class="button is-danger" type="submit"></input>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="section" id="notelist">
+        <label for="title" class="label">Notes: </label>
+        <!-- <article class="message is-primary">
+            <div class="message-header">
+                Note 1
+                <button class="delete" id="delete"></button>
+            </div>
+            <div class="message-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, distinctio.
+            </div>
+        </article> -->
+    </section>
+    <script>
+        function validatenote(){
+           let note = document.forms["thisform"]["input"].value;
+           if (note === "") {
+            alert("The Input Field Contains No Text!")
+           } else {
+               addnote(note);
+            }
+        }
+        function addnote(noteContent){
+            const form = document.getElementById("input");
+            form.value = "";
+            const note = document.createElement("article");
+            note.className = "message is-warning";
+
+            const deletebutton = document.createElement("button");
+            deletebutton.className = "delete";
+            deletebutton.setAttribute("onclick", "deletenote(this)")
+            deletebutton.id = "delete";
+            
+            const notename_div = document.createElement("div");
+            const notecontent_div = document.createElement("div");
+
+            const notename = document.createTextNode(`Note (${Date()})`);
+            const notecontent = document.createTextNode(noteContent);
+
+            notename_div.className = "message-header";
+            notename_div.appendChild(notename);
+            notename_div.appendChild(deletebutton);
+            notecontent_div.className = "message-body";
+            notecontent_div.appendChild(notecontent);
+
+            note.appendChild(notename_div);
+            note.appendChild(notecontent_div);
+            const notelist = document.getElementById("notelist");
+            notelist.appendChild(note);
+        }
+        
+        function deletenote(me){
+            var note = me.parentNode.parentNode;
+            note.remove()
+        }
+    </script>
+</body>
+</html>

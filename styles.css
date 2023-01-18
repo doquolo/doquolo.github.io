@@ -1,0 +1,93 @@
+:root {
+    --bg-img-url: url(https://lh3.googleusercontent.com/fife/AAbDypBf3O9IFTSrY8mtqQmPg1EoklrR2DZkEC_bUvOLKGdEKSCc7r8p-Msyr4TAJt6pDRl3Dk-qpGaAOLPf5vLKtwf_UriA8jahZqVjCJLWf5GRXmZHgS9FTwtdEshgYxVgKQ-TPVUChUloFfcEohkll66hv8MGzy-ppZGGYxGo8CwRbxmjYHSIq5MvRPlOeGHwY2kDfEmyrHKgqOjcwr4NOniYrVq0kdptzJa9oL5OFpFHC72kTuqWlgpadRtmLNyVZqsrbhFiILG3w8ypdgPvcaknUioSqA_FVGIzEHFOYizRirFyU_Bd7eM8FurxsXqmg5Cn3oezMvetPHcM9YDvT2NFcle3vgVXb4095NUUEH3NriwAtXF-jcxvLIGHcSfslSJfIQJETcRWzltoH6XRByv4QoXHI9yZNWqIthdktts5T0c0lkb2oY94W7AwqBCnEO8goA82B3F8gSRMJeyf7pMDM1DSc7xc3g7Mla8IeeGM4XWwjcK3t0e4od5qcPG31zCO8g0HCLl2J9noZqc6aZ9k2z82QpEjEj_bz-_BYjdcfVX8Z2pyEvXOHfg3o27h2RLCWA1TIc07OKnq8Nv7py7LjHrgU3IegK9bEC4zUMDZLBrNjPiRlrfqF1IpsRLloguobirqKJymzvkEfusKPU5F0Cadzy2tNYld5RSbeV51rBrHLxZMUR0a7QEQc1r2MQLxC4mR1xZifP4nxNelfxACcTbXN3Ww3hLccbbPgTK0zNLL8XuYjW_QUK0YtfhAOj2X_b1RToPV_Lvt9E1rIFmh29m4T17P2ayH40iCGUNzcx2d2ubL9KMLDhzVQCfqqKXyZ-5DDfuhernAdza4Mbx2WnUfri-FSTPScLLEBLiSy4FWk5uR3ILgmDMDywE_DqsZ10qH_Ull49SlDdyz9-Uy13f--Cq1LQaCk4HKO4kNTiiUjSQk-GbhG7zGFqYWeN0=w1440-h789);
+}
+
+body, html {
+    font-family: 'Devil Breeze', sans-serif;
+    color: #fafafa;
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: var(--bg-img-url);
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* clock & info */
+.topmost {
+    position: relative;
+    top: 0.35rem;
+    display: flex;
+    justify-items: center;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 250;
+    justify-content: center;
+}
+.top {
+    position: relative;
+    top: 5rem;
+    font-size: 1rem;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+#time {
+    font-family: 'Roboto Black', sans-serif;
+    font-size: 425%;
+    font-weight: 500;
+}
+.info {
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: lighter;
+}
+
+/* sign */
+.sign {
+    top: 70%;
+    display: flex;
+    position: relative;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.95rem;
+    font-weight: lighter;
+}
+
+
+/* action button */
+.filter-white {
+    filter: invert(97%) sepia(21%) saturate(6070%) hue-rotate(180deg) brightness(113%) contrast(104%);
+}
+
+.actions {
+    color: #fafafa;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0rem 0rem;
+}
+
+.left {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.right {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}

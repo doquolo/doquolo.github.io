@@ -2,6 +2,16 @@
     --bg-img-url: url(https://lh3.googleusercontent.com/fife/AAbDypBf3O9IFTSrY8mtqQmPg1EoklrR2DZkEC_bUvOLKGdEKSCc7r8p-Msyr4TAJt6pDRl3Dk-qpGaAOLPf5vLKtwf_UriA8jahZqVjCJLWf5GRXmZHgS9FTwtdEshgYxVgKQ-TPVUChUloFfcEohkll66hv8MGzy-ppZGGYxGo8CwRbxmjYHSIq5MvRPlOeGHwY2kDfEmyrHKgqOjcwr4NOniYrVq0kdptzJa9oL5OFpFHC72kTuqWlgpadRtmLNyVZqsrbhFiILG3w8ypdgPvcaknUioSqA_FVGIzEHFOYizRirFyU_Bd7eM8FurxsXqmg5Cn3oezMvetPHcM9YDvT2NFcle3vgVXb4095NUUEH3NriwAtXF-jcxvLIGHcSfslSJfIQJETcRWzltoH6XRByv4QoXHI9yZNWqIthdktts5T0c0lkb2oY94W7AwqBCnEO8goA82B3F8gSRMJeyf7pMDM1DSc7xc3g7Mla8IeeGM4XWwjcK3t0e4od5qcPG31zCO8g0HCLl2J9noZqc6aZ9k2z82QpEjEj_bz-_BYjdcfVX8Z2pyEvXOHfg3o27h2RLCWA1TIc07OKnq8Nv7py7LjHrgU3IegK9bEC4zUMDZLBrNjPiRlrfqF1IpsRLloguobirqKJymzvkEfusKPU5F0Cadzy2tNYld5RSbeV51rBrHLxZMUR0a7QEQc1r2MQLxC4mR1xZifP4nxNelfxACcTbXN3Ww3hLccbbPgTK0zNLL8XuYjW_QUK0YtfhAOj2X_b1RToPV_Lvt9E1rIFmh29m4T17P2ayH40iCGUNzcx2d2ubL9KMLDhzVQCfqqKXyZ-5DDfuhernAdza4Mbx2WnUfri-FSTPScLLEBLiSy4FWk5uR3ILgmDMDywE_DqsZ10qH_Ull49SlDdyz9-Uy13f--Cq1LQaCk4HKO4kNTiiUjSQk-GbhG7zGFqYWeN0=w1440-h789);
 }
 
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
 body, html {
     font-family: 'Devil Breeze', sans-serif;
     color: #fafafa;
@@ -64,9 +74,24 @@ body, html {
     align-items: center;
     flex-direction: column;
     font-size: 0.95rem;
-    font-weight: lighter;
+    font-weight: 150;
+}
+.sign > p {
+    margin: 0;
+}
+.sign > p:last-child {
+    margin-top: 0.15rem;
+    font-size: 0.85rem;
+    display: flex;
+    justify-items: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
+.material-symbols-outlined {
+    margin-right: 0.25rem;
+}
 
 /* action button */
 .filter-white {
